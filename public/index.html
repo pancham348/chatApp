@@ -1,0 +1,31 @@
+<html>
+  <head>
+    <title>Chat App</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="socket.io/socket.io.js"></script>
+    <script src="javascripts/chat_ui.js"></script>
+    <script src="javascripts/chat.js"></script>
+  </head>
+  <body>
+    <div id="main">
+      <div id="username"></div>
+      <ul id="message-board">
+      </ul>
+
+      <form id="chat-window" method="POST">
+        <textarea id="text-form"></textarea>
+        <input type="submit" id="submission-button" value="Send">
+      </form>
+
+      <ul id="users-list">
+      </ul>
+    </div>
+
+    <script type="text/javascript" charset="utf-8">
+      $(document).ready(function(){
+        var chatUI = new ChatUI($("#main"));
+      })
+
+    </script>
+  </body>
+</html>
